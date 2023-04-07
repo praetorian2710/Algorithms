@@ -10,16 +10,19 @@ int main(){
 	freopen("input1.txt", "r", stdin);
 	freopen("output1.txt", "w", stdout);
 	#endif // ONLINE_JUDGE
-    int n;
+    ll t;
+    cin>>t;
+    while(t--){
+    ll n ;
     cin>>n;
-    vector<int> v;
-    fr(0,n-1){
-        int a;
-        cin>>a;
-        v.pb(a);
+    while(n%2==0){
+        n=n/2;
     }
-    sort(v.begin(),v.end());
-    fr(0,n-1)
-    cout<<v[i]<<" ";
+    if(n>1)
+    cout<<"YES";
+    else
+    cout<<"NO";
+    cout<<endl;
+    }
 	return 0;
 }
