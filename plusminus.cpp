@@ -11,16 +11,22 @@ int main(){
 	freopen("input1.txt", "r", stdin);
 	freopen("output1.txt", "w", stdout);
 	#endif // ONLINE_JUDGE
-    string s, t;
-    cin >> s >> t;
-    size_t pos = 0;
-    for (size_t i = 0; i < t.length(); ++i)
-    {
-        if (t[i] == s[pos])
-        {
-            pos += 1;
+    ll t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin >> n;
+        int arr[n];
+        fr(0,n-1)
+        cin>>arr[i];
+        int ne=0,p=0;
+        for(int i=n-1;i>=0;i--){
+            if(arr[i]==-1)
+            ne=i+1;
+            else
+            p=i+1;
         }
+        cout<<abs(p-ne)<<endl;
     }
-    cout << pos + 1 << endl;
-    return 0;
+	return 0;
 }

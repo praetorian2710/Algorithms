@@ -11,16 +11,15 @@ int main(){
 	freopen("input1.txt", "r", stdin);
 	freopen("output1.txt", "w", stdout);
 	#endif // ONLINE_JUDGE
-    string s, t;
-    cin >> s >> t;
-    size_t pos = 0;
-    for (size_t i = 0; i < t.length(); ++i)
-    {
-        if (t[i] == s[pos])
-        {
-            pos += 1;
-        }
+    ll t;
+    cin>>t;
+    while(t--){
+        ll p,q,r,s;
+        cin>>p>>q>>r>>s;
+        if((p>(q+r+s))||(q>(p+r+s))||(r>(q+p+s))||(s>(q+r+p)))
+        cout<<"YES"<<endl;
+        else
+        cout<<"NO"<<endl;
     }
-    cout << pos + 1 << endl;
-    return 0;
+	return 0;
 }

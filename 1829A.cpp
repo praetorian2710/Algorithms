@@ -11,16 +11,18 @@ int main(){
 	freopen("input1.txt", "r", stdin);
 	freopen("output1.txt", "w", stdout);
 	#endif // ONLINE_JUDGE
-    string s, t;
-    cin >> s >> t;
-    size_t pos = 0;
-    for (size_t i = 0; i < t.length(); ++i)
-    {
-        if (t[i] == s[pos])
-        {
-            pos += 1;
+    ll t;
+    cin>>t;
+    while(t--){
+        string s,s1="codeforces";
+        cin>>s;
+        ll c=0;
+        fr(0,9){
+            if(s[i]==s1[i])
+            continue;
+            c++;
         }
+        cout<<c<<endl;
     }
-    cout << pos + 1 << endl;
-    return 0;
+	return 0;
 }
