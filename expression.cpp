@@ -11,5 +11,14 @@ int main(){
 	freopen("input1.txt", "r", stdin);
 	freopen("output1.txt", "w", stdout);
 	#endif // ONLINE_JUDGE
+	ll a,b,c;
+    cin>>a>>b>>c;
+    ll ans=0;
+    ans = max(ans, (a + b) * c);
+	ans = max(ans, a * (b + c));
+	ans = max(ans, a * b * c);
+    ans=max(ans,a+b+c);
+
+	cout << ans << endl;
 	return 0;
 }
